@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Form from './components/Form/Form.js';
 import Title from './components/Title/Title';
 import { getBible } from './util/apiCalls.js';
 import './App.css';
@@ -15,6 +16,7 @@ const fetchBible = () => {
     return(
       <main className='App'>
         <Title />
+        <Form />
       </main>
     )
   }
