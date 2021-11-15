@@ -1,31 +1,35 @@
-import React, { Component } from 'react';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Form.css'
 
 
-class Form extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchTerm: ''
-    }
+const Form = ({ fetchSearchedVerse }) =>
+{
+  const [keyword, setKeyword] = useState("")
+
+  const handleChange = (event) => {
+    setKeyword(event.target.value)
+
   }
 
-render() {
   return (
-    <header className="nav-bar">
-        <div className="title">
-        </div>
+      <main>
           <form className="search-bar">
             <input
               type='text'
               placeholder='Search verse by keyword'
               name='input'
-              onChange={this.props.handleChange}
+              value={ keyword }
+              onChange={(event) => handleChange(event)}
             />
             </form>
-    </header>
+            <div className="searchButtonArea">
+            <Link to="/result">
+            <button className="searchButton" onClick={() => {fetchSearchedVerse(keyword)}}>Search For Verses</button>
+            </Link>
+            </div>
+          </main>
   )
-}
 }
 
 export default Form;
