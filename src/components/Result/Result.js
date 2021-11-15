@@ -23,7 +23,7 @@ return (
     <h2>{ searchedVerse[0].text }</h2>
   </div>
   <Link to="/">
-  <button className="homeButton">Return Home</button>
+  <button className="home-button">Return Home</button>
   </Link>
 </>
 
