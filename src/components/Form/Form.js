@@ -2,8 +2,14 @@ import { useEffect, useState } from 'react';
 import './Form.css'
 
 
-const Form = ({ setSearchedVerse }) =>
+const Form = ({ fetchSearchedVerse }) =>
 {
+  const [keyword, setKeyword] = useState("")
+
+  const handleChange = (event) => {
+    setKeyword(event.target.value)
+
+  }
 
   return (
       <main>
@@ -12,11 +18,12 @@ const Form = ({ setSearchedVerse }) =>
               type='text'
               placeholder='Search verse by keyword'
               name='input'
-              onChange={this.props.handleChange}
+              value={ keyword }
+              onChange={(event) => handleChange(event)}
             />
             </form>
             <div className="searchButtonArea">
-            <button className="searchButton" onclick="searchButton()">Search For Verses</button>
+            <button className="searchButton" onClick={() => {fetchSearchedVerse(keyword)}}>Search For Verses</button>
             </div>
           </main>
   )

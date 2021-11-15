@@ -27,12 +27,17 @@ const fetchDailyVerse = () => {
     setDailyVerse(data.data.passages[0].content)
 
   })
-
 }
+
+const fetchSearchedVerse = (searchText) => {
+  getSearchedVerse(searchText)
+  .then(data => console.log(data))
+}
+
     return(
       <main className='App'>
         <Title />
-        <Form />
+        <Form fetchSearchedVerse={ fetchSearchedVerse }/>
         <DailyVerse dailyVerse={ dailyVerse } dailyVerseDesignation= { dailyVerseDesignation } />
       </main>
     )

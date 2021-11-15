@@ -52,8 +52,8 @@ export const getDailyVerse = () => {
     .catch(error => console.log('error', error));
 }
 
-export const getSearchedVerse = () => {
-  return fetch(`https://api.scripture.api.bible/v1/bibles/179568874c45066f-01/search?query=${searchText}&offset=${offset}`)
+export const getSearchedVerse = ({ searchText }) => {
+  return fetch(`https://api.scripture.api.bible/v1/bibles/179568874c45066f-01/search?query=${searchText}&offset=0`, requestOptions)
     .then(response => response.json())
     .catch(error => console.log('error', error));
 }
