@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Form.css'
 
 
@@ -23,7 +24,9 @@ const Form = ({ fetchSearchedVerse }) =>
             />
             </form>
             <div className="searchButtonArea">
+            <Link to="/result">
             <button className="searchButton" onClick={() => {fetchSearchedVerse(keyword)}}>Search For Verses</button>
+            </Link>
             </div>
           </main>
   )

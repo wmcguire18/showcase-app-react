@@ -10,15 +10,15 @@ function myComponent() {
 }
 
 return(
-  <body>
-    <div class="subheader">
+  <div>
+    <div className="subheader">
       <h2>Verse of the Day:</h2>
       <h3 id="viewing"><span id="verse">{myComponent()}</span></h3>
     </div>
-    <main class="container">
-      <div id="verse-content" class="verse-container"></div>
-    </main>
-  </body>
+    <div className="container">
+      <div id="verse-content" className="verse-container"></div>
+    </div>
+    </div>
 )
 }
 

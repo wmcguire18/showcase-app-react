@@ -1,22 +1,31 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Result.css';
 
 const Result = ({ searchedVerse }) => {
+const [verse, setVerse] = useState()
 
-const searchVerses = () => {
-if(searchedVerse.length) {
-  const searchedVerseIndex = Math.floor(Math.random() * searchedVerse.length);
+//   const searchVerses = () => {
+//     if(searchedVerse.length) {
+//       const searchedVerseIndex = Math.floor(Math.random() * searchedVerse.length);
+//
+//       const resultVerse = searchedVerse[searchedVerseIndex];
+//       setVerse(resultVerse)
+// }
+// }
 
-  const verse = searchedVerse[searchedVerseIndex];
-  return verse
-}
-}
-console.log(searchVerses())
-
-
+const renderedSearchVerse = searchedVerse[0]
 
 return (
-<h1> Result </h1>
+<>
+  <div className="search-verse-container">
+  <h4>{ searchedVerse[0].reference } </h4>
+    <h2>{ searchedVerse[0].text }</h2>
+  </div>
+  <Link to="/">
+  <button className="homeButton">Return Home</button>
+  </Link>
+</>
 
 )
 

@@ -3,6 +3,7 @@ import Form from './components/Form/Form.js';
 import DailyVerse from './components/DailyVerse/DailyVerse.js';
 import Title from './components/Title/Title';
 import Result from './components/Result/Result.js';
+import { Route, Routes } from 'react-router-dom';
 import { getBible, getDailyVerse, getSearchedVerse } from './util/apiCalls.js';
 import './App.css';
 
@@ -37,12 +38,27 @@ const fetchSearchedVerse = (searchText) => {
 
     return(
       <main className='App'>
-        <Title />
-        <Form fetchSearchedVerse={ fetchSearchedVerse }/>
-        <DailyVerse dailyVerse={ dailyVerse } dailyVerseDesignation= { dailyVerseDesignation } />
-        {searchedVerse.length > 0 &&
-        <Result searchedVerse={ searchedVerse } />
-      }
+
+    <Routes>
+      <Route exact path="/" element={
+        <div>
+          <Title />
+          <DailyVerse dailyVerse={ dailyVerse } dailyVerseDesignation= { dailyVerseDesignation }/>
+          <Form fetchSearchedVerse={ fetchSearchedVerse }/>
+        </div>
+        }
+      />
+
+        <Route exact path="/result" element={
+          <div>
+            <Title />
+            {searchedVerse.length > 0 ?
+            <Result searchedVerse={ searchedVerse } /> : null}
+          </div>
+        }
+      />
+    }
+    </Routes>
       </main>
     )
   }

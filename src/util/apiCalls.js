@@ -1,10 +1,3 @@
-//apikey c40ad1766e26de4770b073a61131a5b1
-
-//bible reference 179568874c45066f-01
-
-//the whole bible - https://api.scripture.api.bible/v1/bibles/179568874c45066f-01
-
-
 const dailyVerseBank = [
   `JER.29.11`,
   `PSA.23`,
@@ -54,7 +47,7 @@ export const getDailyVerse = () => {
     .catch(error => console.log('error', error));
 }
 
-export const getSearchedVerse = ({ searchText }) => {
+export const getSearchedVerse = (searchText) => {
   return fetch(`https://api.scripture.api.bible/v1/bibles/179568874c45066f-01/search?query=${searchText}&offset=0`, requestOptions)
     .then(response => response.json())
     .catch(error => console.log('error', error));
