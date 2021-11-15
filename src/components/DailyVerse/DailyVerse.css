@@ -1,0 +1,15 @@
+.subheader {
+font-family: 'Belleza', sans-serif;
+background-color: #A0522D;
+color: #FFF5EE;
+border: 10px solid gold;
+margin-left: 15px;
+margin-right: 15px;
+margin-bottom: 25px;
+}
+
+.container {
+font-family: 'Belleza', sans-serif;
+background-color: #A0522D;
+color: #FFF5EE;
+}

@@ -1,5 +1,24 @@
 .search-verse-container {
-  font-size: 40px;
-  color: black;
-  background-color: blue;
+  font-family: 'Belleza', sans-serif;
+  background-color: #A0522D;
+  color: #FFF5EE;
+  border: 10px solid gold;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 25px;
+}
+
+.home-button {
+  font-family: 'Belleza', sans-serif;
+  color: white;
+  height: 40px;
+  width: 20%;
+  font-size: 25px;
+  background-color: #A0522D;
+  border: 6px solid #A0522D;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  cursor: pointer;
 }

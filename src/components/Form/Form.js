@@ -17,7 +17,7 @@ const Form = ({ fetchSearchedVerse }) =>
           <form className="search-bar">
             <input
               type='text'
-              placeholder='Search verse by keyword'
+              placeholder='I want a verse concerning...'
               name='input'
               value={ keyword }
               onChange={(event) => handleChange(event)}
@@ -25,7 +25,7 @@ const Form = ({ fetchSearchedVerse }) =>
             </form>
             <div className="searchButtonArea">
             <Link to="/result">
-            <button className="searchButton" onClick={() => {fetchSearchedVerse(keyword)}}>Search For Verses</button>
+            <button className="search-button" onClick={() => {fetchSearchedVerse(keyword)}}>Submit Search</button>
             </Link>
             </div>
           </main>
