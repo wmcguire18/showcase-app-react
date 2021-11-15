@@ -1,12 +1,17 @@
 .title {
-  grid-area: a;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 50px;
+  font-family: 'Suranna', serif;
+  color: maroon;
 }
 
-.title > h1 {
-  font-size: 5rem;
+.title > h2 {
+  font-size: 25px;
   cursor: pointer;
+  font-family: 'Suranna', serif;
+  color: maroon;
+  margin-top: -100px;
 }
