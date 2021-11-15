@@ -2,13 +2,14 @@ import { useEffect, useState } from 'react';
 import Form from './components/Form/Form.js';
 import DailyVerse from './components/DailyVerse/DailyVerse.js';
 import Title from './components/Title/Title';
-import { getBible, getDailyVerse } from './util/apiCalls.js';
+import { getBible, getDailyVerse, getSearchedVerse } from './util/apiCalls.js';
 import './App.css';
 
 const App = () => {
   const [verses, setVerses] = useState()
   const [dailyVerse, setDailyVerse] = useState()
   const [dailyVerseDesignation, setDailyVerseDesignation] = useState()
+  const [searchedVerse, setSearchedVerse] = useState()
 
   useEffect(() =>{
     fetchDailyVerse()

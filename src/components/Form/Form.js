@@ -1,20 +1,12 @@
-import React, { Component } from 'react';
+import { useEffect, useState } from 'react';
 import './Form.css'
 
 
-class Form extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchTerm: ''
-    }
-  }
+const Form = ({ setSearchedVerse }) =>
+{
 
-render() {
   return (
-    <header className="nav-bar">
-        <div className="title">
-        </div>
+      <main>
           <form className="search-bar">
             <input
               type='text'
@@ -23,9 +15,11 @@ render() {
               onChange={this.props.handleChange}
             />
             </form>
-    </header>
+            <div className="searchButtonArea">
+            <button className="searchButton" onclick="searchButton()">Search For Verses</button>
+            </div>
+          </main>
   )
-}
 }
 
 export default Form;
