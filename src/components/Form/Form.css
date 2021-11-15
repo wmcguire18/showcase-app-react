@@ -1,21 +1,37 @@
 input  {
+  font-family: 'Belleza', sans-serif;
   color: #351e29;
   height: 60px;
   width: 50%;
   font-size: 25px;
   background-color: white;
-  border: 6px solid white;
+  border: 6px solid #A0522D;
   text-align: center;
-  border-radius: 100px;
-  margin-bottom: 50px;
-  margin-right: 0px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 ::placeholder {
-  color: #351e29;
+  color: #A0522D;
+  font-family: 'Belleza', sans-serif;
 }
 
 .search-bar {
   display: flex;
   justify-content: center;
+}
+
+.search-button {
+  font-family: 'Belleza', sans-serif;
+  color: white;
+  height: 40px;
+  width: 20%;
+  font-size: 25px;
+  background-color: #A0522D;
+  border: 6px solid #A0522D;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  cursor: pointer;
 }

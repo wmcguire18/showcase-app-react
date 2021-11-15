@@ -25,7 +25,7 @@ const Form = ({ fetchSearchedVerse }) =>
             </form>
             <div className="searchButtonArea">
             <Link to="/result">
-            <button className="searchButton" onClick={() => {fetchSearchedVerse(keyword)}}>Search For Verses</button>
+            <button className="search-button" onClick={() => {fetchSearchedVerse(keyword)}}>Submit Search</button>
             </Link>
             </div>
           </main>
