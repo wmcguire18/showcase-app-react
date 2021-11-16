@@ -52,12 +52,3 @@ export const getSearchedVerse = (searchText) => {
     .then(response => response.json())
     .catch(error => console.log('error', error));
 }
-
-
-
-
-
-
-// export const getPhotosForDay = (date) => {
-//   return fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${getDateString(date)}&api_key=${process.env.REACT_APP_API_KEY}`)
-// }

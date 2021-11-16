@@ -5,15 +5,6 @@ import './Result.css';
 const Result = ({ searchedVerse }) => {
 const [verse, setVerse] = useState()
 
-//   const searchVerses = () => {
-//     if(searchedVerse.length) {
-//       const searchedVerseIndex = Math.floor(Math.random() * searchedVerse.length);
-//
-//       const resultVerse = searchedVerse[searchedVerseIndex];
-//       setVerse(resultVerse)
-// }
-// }
-
 const renderedSearchVerse = searchedVerse[0]
 
 return (
